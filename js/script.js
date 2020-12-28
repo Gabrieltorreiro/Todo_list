@@ -88,3 +88,4 @@ function buffer() {
 
 getTasks();
 printTasks();
+buttons.style.display = "none";

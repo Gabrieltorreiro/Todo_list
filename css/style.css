@@ -23,6 +23,15 @@ body{
     row-gap:20px;
 }
 
+.title{
+    display: grid;
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
 .tasksInputArea {
     width: 100%;
     display: grid;
