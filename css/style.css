@@ -20,10 +20,10 @@ body{
     grid-template-columns: auto;
     justify-content: center;
     width: 400px;
+    row-gap:20px;
 }
 
 .tasksInputArea {
-    padding: 20px;
     width: 100%;
     display: grid;
     grid-template-columns: auto auto;
@@ -62,7 +62,7 @@ body{
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
-    gap: 10px;
+    row-gap: 10px;
     width: 100%;
 }
 
@@ -85,10 +85,28 @@ body{
     height: 40px;
     padding: 0 20px;
     font-size: 1em;
+    outline: none;
+    background-color: rgb(220, 246, 255);
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .todoList .task input[type="button"]{
     height: 40px;
     padding: 0 20px;
     font-size: 1em;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.todoList .task input[type="button"]:hover{
+    background-color: lightblue;
+}
+
+.buttons {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: auto auto;
 }

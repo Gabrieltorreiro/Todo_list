@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Todo List</title>
 </head>
+
 <body>
     <div class="app">
         <div class="container">
-            <form class="tasksInputArea">
+            <div class="tasksInputArea">
                 <input type="text" name="" id="taskInput" placeholder="Add a task">
-                <input type="submit" id="addBtn" value="Add">
-            </form>
-            <div class="todoList">
-                <div class="task">
-                    <input type="checkbox" name="" id="">
-                    <input type="text" name="" id="" value="homework">
-                    <input type="button" value="Delete">
-                </div>
+                <input type="button" id="addBtn" value="Add">
+            </div>
+            <div class="todoList"></div>
+            <div class="buttons">
+                <input type="button" id="finishAll" value="Finish All">
+                <input type="button" id="deleteAll" value="Delete All">
             </div>
         </div>
     </div>
     <script src="./js/script.js"></script>
 </body>
+
 </html>

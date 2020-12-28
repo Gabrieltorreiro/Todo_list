@@ -1,6 +1,9 @@
 let addBtn = document.querySelector("#addBtn");
 let taskInput = document.querySelector("#taskInput");
 let todoList = document.querySelector(".todoList");
+let buttons = document.querySelector(".buttons");
+let finishAll = document.querySelector("#finishAll");
+let deleteAll = document.querySelector("#deleteAll");
 let tasks = [];
 
 addBtn.addEventListener("click", () => {
@@ -11,18 +14,33 @@ addBtn.addEventListener("click", () => {
 });
 
 
+finishAll.addEventListener("click", () => {
+    tasks.forEach((item) => {
+        item.complete = item.complete ? false : true;
+    });
+    setTask();
+    printTasks();
+});
+
+deleteAll.addEventListener("click", () => {
+    tasks = [];
+    setTask();
+    printTasks();
+    buttons.style.display = "none";
+});
 
 function setTask() {
     localStorage.setItem("todo", JSON.stringify(tasks));
 }
 
 function printTasks() {
+    buttons.style.display = "grid";
     todoList.innerHTML = "";
     tasks.forEach((item) => {
         todoList.innerHTML +=
             `<div class="task">
                 <input type="checkbox" onclick="finished(${item.id})" ${item.complete == true ? "checked" : ""}>
-                <input type="text" value="${item.text}">
+                <input type="text" value="${item.text}" readonly>
                 <input type="button" onclick="remove(${item.id})" value="Delete">
             </div>`;
     });
